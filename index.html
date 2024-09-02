@@ -197,9 +197,10 @@
         <h2 class="title is-3"  style="text-align: center;">Project Highlights</h2>
         <div>
           <h3 class="carousel-heading" data-target="#section1">Contributions</h3>
-          <h3 class="carousel-heading" data-target="#section2">Evaluating our Fine Tuned Model (Input and Output) </h3>
+          <h3 class="carousel-heading" data-target="#section2">Evaluation Criteria </h3>
           <h3 class="carousel-heading" data-target="#section3">Dataset</h3>
           <h3 class="carousel-heading" data-target="#section4">Fine-tuning</h3>
+          <h3 class="carousel-heading" data-target="#section5">Experiments</h3>
 
 
         </div>
@@ -214,7 +215,7 @@
         </ul>
         </div>
         <div id="section2" class="carousel-content">
-         <ul>
+         <ul style="text-align: left;">
           <li>
             <b>Input : </b>  A mathematical question with a relevant image and multiple choice answers (letters and yes/no questions)
           </li>
@@ -224,7 +225,7 @@
 
           <li>
             <b>Evaluation Metric :</b> accuracy on various subsections of testmini (TestM) and our own validation set (GVal)
-             <ul>
+             <ul style="text-align: left;">
               <li>TestM-B: testmini bar chart questions</li>
               <li>TestM-L: testmini line chart questions</li>
               <li>TestM-B: testmini non-bar-and-line-chart questionss</li>
@@ -235,28 +236,31 @@
          </ul>
         </div>
         <div id="section3" class="carousel-content">
-          <p>
+          <h4>
             Generate 1060 filtered samples (860 train, 200 test)
-          </p>
+          </h4>
           <figure style="margin-top:10px; text-align:center;">
             <img src="static/images/Dataset_Example.png" alt="Dataset Example" style="width:100%; max-width:600px;">
             <figcaption style="margin-top:5px; font-style:italic; color:#555;">
-              Example Bar Chart Generated Using Pipelinf. Associated question: According to the bar chart, what was the percentage increase in hours spent by users on Online Shopping from 2019 to 2020?
+              Example Bar Chart Generated Using Pipelie. Associated question: According to the bar chart, what was the percentage increase in hours spent by users on Online Shopping from 2019 to 2020?
             </figcaption>
         </figure>
         </div>
 
         <div id="section4" class="carousel-content">
-          <p>
-            Generate 1060 filtered samples (860 train, 200 test)
-          </p>
-          <figure style="margin-top:10px; text-align:center;">
-            <img src="static/images/Dataset_Example.png" alt="Dataset Example" style="width:100%; max-width:600px;">
-            <figcaption style="margin-top:5px; font-style:italic; color:#555;">
-              Example Bar Chart Generated Using Pipelinf. Associated question: According to the bar chart, what was the percentage increase in hours spent by users on Online Shopping from 2019 to 2020?
-            </figcaption>
-        </figure>
+         <ul style="text-align: left;">
+          <li>Used LoRA and DoRA to finetune the language model (LM) component of <b>InternLM-XComposer2-VL-1.8B</b></li>
+          <li>I jointly fully fine-tune the vision encoder (ViT)</li>
+          <li>I did not finetune the sampler which connects ViT and LM.</li>
+
+         </ul>
         </div>
+
+        <div id="section5" class="carousel-content">
+          <ul>
+ 
+          </ul>
+         </div>
       </div>
     </div>
   </div>
