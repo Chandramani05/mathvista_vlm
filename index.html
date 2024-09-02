@@ -236,9 +236,9 @@
          </ul>
         </div>
         <div id="section3" class="carousel-content">
-          <h4>
+          <h2>
             Generate 1060 filtered samples (860 train, 200 test)
-          </h4>
+          </h2>
           <figure style="margin-top:10px; text-align:center;">
             <img src="static/images/Dataset_Example.png" alt="Dataset Example" style="width:100%; max-width:600px;">
             <figcaption style="margin-top:5px; font-style:italic; color:#555;">
@@ -252,13 +252,19 @@
           <li>Used LoRA and DoRA to finetune the language model (LM) component of <b>InternLM-XComposer2-VL-1.8B</b></li>
           <li>I jointly fully fine-tune the vision encoder (ViT)</li>
           <li>I did not finetune the sampler which connects ViT and LM.</li>
-          <ul>LoRA
+          <li><ul>LoRA
             <li>
               Fixes existing weights and learns an additional low-rank update matrix
             </li>
             <li>Reduces GPU memory by only propagating gradients through matrices 
               with a rank r << the ranks of the dens weight matrix</li>
-          </ul>
+            </li>
+          </ul> </li>
+
+          <li>DoRA <ul>
+            <li>Adds an extra parameter m to tune the magnitude of the weight matrices</li>
+            <li>Increases memory consumption during training, but does not affect inference cost</li>
+          </ul></li>
 
          </ul>
         </div>
