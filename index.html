@@ -297,6 +297,55 @@
     <div >
       <div class="container is-max-desktop">
         <h2 class="title is-3"  style="text-align: center;">Results</h2>
+        <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center;">
+          <thead>
+              <tr>
+                  <th>Model</th>
+                  <th>GVal-B</th>
+                  <th>TestM-B</th>
+                  <th>TestM-L</th>
+                  <th>TestM-O</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Baseline</td>
+                  <td>50.0</td>
+                  <td>64.5</td>
+                  <td>58.3</td>
+                  <td>50.7</td>
+              </tr>
+              <tr>
+                  <td>LoRA (r = 2)</td>
+                  <td>64.1</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+              </tr>
+              <tr>
+                  <td>LoRA (r = 8)</td>
+                  <td>59.4</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+              </tr>
+              <tr>
+                  <td>LoRA (r = 32)</td>
+                  <td>67.2</td>
+                  <td>61.3</td>
+                  <td>58.3</td>
+                  <td>54.4</td>
+              </tr>
+              <tr>
+                  <td>Ablate ViT</td>
+                  <td>60.9</td>
+                  <td>61.3</td>
+                  <td>58.3</td>
+                  <td>55.5</td>
+              </tr>
+          </tbody>
+      </table>
+      
         </div>
      </div>
      </div>
