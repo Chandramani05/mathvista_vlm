@@ -252,6 +252,13 @@
           <li>Used LoRA and DoRA to finetune the language model (LM) component of <b>InternLM-XComposer2-VL-1.8B</b></li>
           <li>I jointly fully fine-tune the vision encoder (ViT)</li>
           <li>I did not finetune the sampler which connects ViT and LM.</li>
+          <ul>LoRA
+            <li>
+              Fixes existing weights and learns an additional low-rank update matrix
+            </li>
+            <li>Reduces GPU memory by only propagating gradients through matrices 
+              with a rank r << the ranks of the dens weight matrix</li>
+          </ul>
 
          </ul>
         </div>
