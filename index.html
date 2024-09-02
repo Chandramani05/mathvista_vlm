@@ -200,7 +200,6 @@
           <h3 class="carousel-heading" data-target="#section2">Evaluating our Fine Tuned Model (Input and Output) </h3>
           <h3 class="carousel-heading" data-target="#section3">Dataset</h3>
           <h3 class="carousel-heading" data-target="#section4">Fine-tuning</h3>
-          <h3 class="carousel-heading" data-target="#section5">Experiments and Results</h3>
 
 
         </div>
@@ -222,12 +221,41 @@
           <li>
             <b>Output :</b> A multiple-choice answer
           </li>
+
+          <li>
+            <b>Evaluation Metric :</b> accuracy on various subsections of testmini (TestM) and our own validation set (GVal)
+             <ul>
+              <li>TestM-B: testmini bar chart questions</li>
+              <li>TestM-L: testmini line chart questions</li>
+              <li>TestM-B: testmini non-bar-and-line-chart questionss</li>
+              <li>GVal-B: bar chart questions in the validation set we create</li>
+              <li>GVal-L: line chart questions in the validation set we c</li>
+             </ul>
+          </li>
          </ul>
         </div>
         <div id="section3" class="carousel-content">
           <p>
-            The γGAMMAS pipeline demonstrated a 6.5% increase in performance on bar chart tasks and a 12.5% increase on line chart tasks in the MathVista benchmark.
+            Generate 1060 filtered samples (860 train, 200 test)
           </p>
+          <figure style="margin-top:10px; text-align:center;">
+            <img src="static/images/Dataset_Example.png" alt="Dataset Example" style="width:100%; max-width:600px;">
+            <figcaption style="margin-top:5px; font-style:italic; color:#555;">
+              Example Bar Chart Generated Using Pipelinf. Associated question: According to the bar chart, what was the percentage increase in hours spent by users on Online Shopping from 2019 to 2020?
+            </figcaption>
+        </figure>
+        </div>
+
+        <div id="section4" class="carousel-content">
+          <p>
+            Generate 1060 filtered samples (860 train, 200 test)
+          </p>
+          <figure style="margin-top:10px; text-align:center;">
+            <img src="static/images/Dataset_Example.png" alt="Dataset Example" style="width:100%; max-width:600px;">
+            <figcaption style="margin-top:5px; font-style:italic; color:#555;">
+              Example Bar Chart Generated Using Pipelinf. Associated question: According to the bar chart, what was the percentage increase in hours spent by users on Online Shopping from 2019 to 2020?
+            </figcaption>
+        </figure>
         </div>
       </div>
     </div>
