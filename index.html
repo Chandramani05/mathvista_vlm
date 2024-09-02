@@ -43,6 +43,30 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .carousel-content {
+      display: none;
+    }
+    .carousel-content.active {
+      display: block;
+    }
+    .carousel-heading {
+      cursor: pointer;
+      color: #007bff;
+    }
+    .carousel-heading:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $('.carousel-heading').click(function() {
+        $('.carousel-content').removeClass('active');
+        $($(this).data('target')).addClass('active');
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -114,11 +138,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -127,7 +150,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -146,6 +169,37 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Research Highlights</h2>
+        <div>
+          <h3 class="carousel-heading" data-target="#section1">Synthetic Data Generation</h3>
+          <h3 class="carousel-heading" data-target="#section2">Improved VLM Performance</h3>
+          <h3 class="carousel-heading" data-target="#section3">Evaluation on MathVista Benchmark</h3>
+        </div>
+        <div id="section1" class="carousel-content active">
+          <p>
+            γGAMMAS uses GPT-4 and code generation to create synthetic multi-modal data, enhancing mathematical reasoning in Vision-Language Models.
+          </p>
+        </div>
+        <div id="section2" class="carousel-content">
+          <p>
+            Fine-tuning of InternLM-XComposer2-VL-1.8B using LoRA and DoRA techniques has led to significant performance improvements in tasks involving bar charts and line plots.
+          </p>
+        </div>
+        <div id="section3" class="carousel-content">
+          <p>
+            The γGAMMAS pipeline demonstrated a 6.5% increase in performance on bar chart tasks and a 12.5% increase on line chart tasks in the MathVista benchmark.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Image carousel -->
@@ -191,57 +245,55 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
-          </video>
-        </div>
+          </video> -->
+        <!-- </div>
         <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <!-- <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
+            <!-- <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
