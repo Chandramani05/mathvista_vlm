@@ -45,28 +45,32 @@
   <script src="static/js/index.js"></script>
 
   <style>
-    .carousel-content {
-      display: none;
-    }
-    .carousel-content.active {
-      display: block;
-    }
     .carousel-heading {
-      cursor: pointer;
-      color: #007bff;
+        cursor: pointer;
+        color: #007bff;
+        font-weight: bold;
+        margin-right: 20px;
+        display: inline-block;
     }
     .carousel-heading:hover {
-      text-decoration: underline;
+        text-decoration: underline;
     }
-  </style>
-  <script>
+    .carousel-content {
+        display: none;
+    }
+    .carousel-content.active {
+        display: block;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
     $(document).ready(function() {
-      $('.carousel-heading').click(function() {
-        $('.carousel-content').removeClass('active');
-        $($(this).data('target')).addClass('active');
-      });
+        $('.carousel-heading').click(function() {
+            $('.carousel-content').removeClass('active');
+            $($(this).data('target')).addClass('active');
+        });
     });
-  </script>
+</script>
 </head>
 <body>
 
