@@ -65,13 +65,17 @@
     }
 
     ul li {
-        list-style-type: circle; 
-        color: black; /* Set list style type to circle */
+        list-style-type: none; /* Remove the default bullet */
+        position: relative; /* Position the bullet using pseudo-elements */
+        padding-left: 20px; /* Add space for the custom bullet */
     }
 
-    ul li::marker {
-        color: red;
-        fill: red; /* Ensure the bullet color is black */
+    ul li::before {
+        content: '•'; /* Use a bullet-like symbol */
+        position: absolute;
+        left: 0;
+        color: red; /* Set the bullet color to red */
+        font-size: 20px; /* Adjust size if necessary */
     }
     
 </style>
@@ -188,7 +192,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="column is-four-fifths">
+    <div >
       <div class="container is-max-desktop">
         <h2 class="title is-3"  style="text-align: center;">Project Highlights</h2>
         <div>
