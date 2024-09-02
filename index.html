@@ -270,7 +270,17 @@
         </div>
 
         <div id="section5" class="carousel-content">
-          <ul>
+          <ul style="text-align: left;"> I tuned the following hyperparamter : 
+            <li> r, the rank of the low-rank matrix in LoRA and DoRA</li>
+            <li>Learning rate: values ranging from 2e-4 to 8e-6</li>
+            <li>Adam optimizer, cosine learning rate schedule with weight decay of 0.1</li>
+            <li>Categories that I train on : 
+               <ul>
+                <li>Whether or not we randomize options for MCQs</li>
+                <li>Whether or not we use filtered data from LLM-as-a-judge</li>
+                <li>Whether or not we modify the vision encoder</li>
+               </ul>
+            </li>
  
           </ul>
          </div>
