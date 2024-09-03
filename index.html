@@ -245,7 +245,7 @@
           </h2>
           <figure style="margin-top:10px; text-align:center;">
             <img src="static/images/Dataset_Example.png" alt="Dataset Example" style="width:100%; max-width:600px;">
-            <figcaption style="margin-top:5px; font-style:italic; color:#555;">
+            <figcaption style= "margin-top:3px; color:#0f0404;">
               Example Bar Chart Generated Using Pipelie. Associated question: According to the bar chart, what was the percentage increase in hours spent by users on Online Shopping from 2019 to 2020?
             </figcaption>
         </figure>
@@ -430,9 +430,13 @@
               <li><b style="color: red;">DoRA with r = 32 is comparable with LoRA with r = 32</b> (from our validation sets, we saw that they were slightly better for bar charts, and worse for line plots). Both outperform the baseline model on the MathVista dataset (both in the bar chart and line chart categories, as well as others).</li>
               
               <li><b style="color: red;">LLM as a judge</b>: We found that this was very useful—the validation accuracy for "LoRA (32)" trained on bar chart data degraded by up to 5.1% without the additional LLM as a judge step to filter out bad examples.</li>
-          
-
           </ul>
+
+          <figure style="margin-top:10px; text-align:center;">
+            <img src="static/images/Result.png" alt="Dataset Example" style="width:100%; max-width:600px;">
+            <figcaption style="margin-top:3px; color:#0f0404;">
+              A Fine-grained analysis of TestM-O
+            </figcaption>
 
          
         
