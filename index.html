@@ -420,6 +420,20 @@
           These are the observations of the experiments :   
           </p>
 
+          <ul style="text-align: left;">
+              <li><b style="color: red;">Using the highest tried rank of 32 for LoRA parameters</b> resulted in maximal accuracy on our validation set when training on bar chart data.</li>
+              
+              <li><b style="color: red;">Ablating the fine-tuning of the vision encoder</b> results in a significant 9.1% drop in our accuracy on the validation set.</li>
+              
+              <li>If we train only on synthetic bar chart data, we do not notice improvement on the bar chart questions in MathVista. However, <b style="color: red;">if we train only on synthetic line chart data, we notice improvements on the line chart questions</b> in MathVista. If we train on both sets of data together, we notice improvements in both categories of MathVista questions. In all cases where we fine-tune, we slightly improve performance on questions that are not bar or line chart related but in the MathVista dataset.</li>
+              
+              <li><b style="color: red;">DoRA with r = 32 is comparable with LoRA with r = 32</b> (from our validation sets, we saw that they were slightly better for bar charts, and worse for line plots). Both outperform the baseline model on the MathVista dataset (both in the bar chart and line chart categories, as well as others).</li>
+              
+              <li><b style="color: red;">LLM as a judge</b>: We found that this was very useful—the validation accuracy for "LoRA (32)" trained on bar chart data degraded by up to 5.1% without the additional LLM as a judge step to filter out bad examples.</li>
+          
+
+          </ul>
+
          
         
           </div>
@@ -432,33 +446,29 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
@@ -467,7 +477,7 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
