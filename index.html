@@ -291,32 +291,123 @@
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="container is-max-desktop">
     <div>
       <div class="container is-max-desktop">
         <h2 class="title is-3" style="text-align: center;">Results</h2>
-        
-        <div style="display: flex; justify-content: space-around; text-align: center;">
-          <div>
-            <img src="static/images/Table_1.png" alt="Table 1" style="max-width: 100%; height: auto;">
-            <p>Caption for Table 1</p>
-          </div>
-          <div>
-            <img src="static/images/Table_2.png" alt="Table 2" style="max-width: 100%; height: auto;">
-            <p>Caption for Table 2</p>
-          </div>
-          <div>
-            <img src="static/images/Table_3.png" alt="Table 3" style="max-width: 100%; height: auto;">
-            <p>Caption for Table 3</p>
-          </div>
-        </div>
-        
+
+        <!-- Table 1 -->
+        <table border="1" style="margin-bottom: 20px;">
+          <caption>Table 1: Only Training on Synthetic Bar Charts</caption>
+          <tr>
+            <th>Model</th>
+            <th>GVal-B</th>
+            <th>TestM-B</th>
+            <th>TestM-L</th>
+            <th>TestM-O</th>
+          </tr>
+          <tr>
+            <td>Baseline</td>
+            <td>50.0</td>
+            <td>64.5</td>
+            <td>58.3</td>
+            <td>50.7</td>
+          </tr>
+          <tr>
+            <td>LoRA (r = 2)</td>
+            <td>64.1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>LoRA (r = 8)</td>
+            <td>59.4</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>LoRA (r = 32)</td>
+            <td>67.2</td>
+            <td>61.3</td>
+            <td>58.3</td>
+            <td>54.4</td>
+          </tr>
+          <tr>
+            <td>Ablate ViT</td>
+            <td>60.9</td>
+            <td>61.3</td>
+            <td>58.3</td>
+            <td>55.5</td>
+          </tr>
+        </table>
+
+        <!-- Table 2 -->
+        <table border="1" style="margin-bottom: 20px;">
+          <caption>Table 2: Only Training on Synthetic Line Plots</caption>
+          <tr>
+            <th>Model</th>
+            <th>GVal-L</th>
+            <th>TestM-B</th>
+            <th>TestM-L</th>
+            <th>TestM-O</th>
+          </tr>
+          <tr>
+            <td>Baseline</td>
+            <td>49.4</td>
+            <td>64.5</td>
+            <td>58.3</td>
+            <td>50.7</td>
+          </tr>
+          <tr>
+            <td>LoRA (32)</td>
+            <td>57.1</td>
+            <td>64.9</td>
+            <td>62.5</td>
+            <td>53.8</td>
+          </tr>
+        </table>
+
+        <!-- Table 3 -->
+        <table border="1">
+          <caption>Table 3: Training on Both Synthetic Bar and Line Plots</caption>
+          <tr>
+            <th>Model</th>
+            <th>GVal-B/L</th>
+            <th>TestM-B</th>
+            <th>TestM-L</th>
+            <th>TestM-O</th>
+          </tr>
+          <tr>
+            <td>Baseline</td>
+            <td>50.0/49.4</td>
+            <td>64.5</td>
+            <td>58.3</td>
+            <td>50.7</td>
+          </tr>
+          <tr>
+            <td>LoRA (32)</td>
+            <td>68.8/63.6</td>
+            <td>67.7</td>
+            <td>70.8</td>
+            <td>54.2</td>
+          </tr>
+          <tr>
+            <td>DoRA (32)</td>
+            <td>71.9/58.4</td>
+            <td>71.0</td>
+            <td>70.8</td>
+            <td>54.6</td>
+          </tr>
+        </table>
+
       </div>
     </div>
   </div>
 </section>
+
  
 
 
