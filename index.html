@@ -432,11 +432,22 @@
               <li><b style="color: red;">LLM as a judge</b>: We found that this was very useful—the validation accuracy for "LoRA (32)" trained on bar chart data degraded by up to 5.1% without the additional LLM as a judge step to filter out bad examples.</li>
           </ul>
 
-          <figure style="margin-top:10px; text-align:center;">
-            <img src="static/images/Result.png" alt="Dataset Example" style="width:100%; max-width:600px;">
-            <figcaption style="margin-top:3px; color:#0f0404;">
-              A Fine-grained analysis of TestM-O
-            </figcaption>
+          <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <figure style="text-align: center;">
+                <img src="static/images/Result.png" alt="Dataset Example" style="width:100%; max-width:300px;">
+                <figcaption style="margin-top:3px; color:#0f0404;">
+                    A Fine-grained analysis of TestM-O
+                </figcaption>
+            </figure>
+        
+            <figure style="text-align: center;">
+                <img src="static/images/tsne.png" alt="Dataset Example" style="width:100%; max-width:300px;">
+                <figcaption style="margin-top:3px; color:#0f0404;">
+                    t-SNE visualizing the embedding similarities between different figure types within MathVista, as well as our synthetic generated data (using the val set).
+                </figcaption>
+            </figure>
+        </div>
+        
 
          
         
@@ -450,38 +461,37 @@
 
 
 <!-- Image carousel -->
-<!-- <section class="hero is-small">
+<section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/example_1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Example Bar Chart from MathVista [19] Associated
+question: How many people like the least preferred object in the
+whole chart?
         </h2>
       </div>
       <div class="item">
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/example_2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Example Line Chart Generated Using GAMMAS. Asso-
+ciated question: In which year, the population of Eagles surpassed
+the population of Sparrows if ever?
         </h2>
       </div>
       <div class="item">
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/example_3.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          Example Line Chart from MathVista [19]. Associated
+          question: Does medium purple have the second highest value?.
        </h2>
      </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
-</section> -->
+</section>
 <!-- End image carousel -->
 
 
