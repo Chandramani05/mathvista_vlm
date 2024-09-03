@@ -290,123 +290,127 @@
       </div>
     </div>
   </div>
-</section>
-<section class="section">
-  <div class="container is-max-desktop">
-    <div>
-      <div class="container is-max-desktop">
-        <h2 class="title is-3" style="text-align: center;">Results</h2>
-
+  
+  <section class="section">
+    <div class="container is-max-desktop" style="max-width: 1200px;">
+      <div class="columns" style="display: flex; justify-content: space-between;">
+  
         <!-- Table 1 -->
-        <table border="1" style="margin-bottom: 20px;">
-          <caption>Table 1: Only Training on Synthetic Bar Charts</caption>
-          <tr>
-            <th>Model</th>
-            <th>GVal-B</th>
-            <th>TestM-B</th>
-            <th>TestM-L</th>
-            <th>TestM-O</th>
-          </tr>
-          <tr>
-            <td>Baseline</td>
-            <td>50.0</td>
-            <td>64.5</td>
-            <td>58.3</td>
-            <td>50.7</td>
-          </tr>
-          <tr>
-            <td>LoRA (r = 2)</td>
-            <td>64.1</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>LoRA (r = 8)</td>
-            <td>59.4</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>LoRA (r = 32)</td>
-            <td>67.2</td>
-            <td>61.3</td>
-            <td>58.3</td>
-            <td>54.4</td>
-          </tr>
-          <tr>
-            <td>Ablate ViT</td>
-            <td>60.9</td>
-            <td>61.3</td>
-            <td>58.3</td>
-            <td>55.5</td>
-          </tr>
-        </table>
-
+        <div class="column" style="flex: 1; margin-right: 10px;">
+          <table border="1" style="width: 100%;">
+            <caption>Table 1: Only Training on Synthetic Bar Charts</caption>
+            <tr>
+              <th>Model</th>
+              <th>GVal-B</th>
+              <th>TestM-B</th>
+              <th>TestM-L</th>
+              <th>TestM-O</th>
+            </tr>
+            <tr>
+              <td>Baseline</td>
+              <td>50.0</td>
+              <td>64.5</td>
+              <td>58.3</td>
+              <td>50.7</td>
+            </tr>
+            <tr>
+              <td>LoRA (r = 2)</td>
+              <td>64.1</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>LoRA (r = 8)</td>
+              <td>59.4</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>LoRA (r = 32)</td>
+              <td>67.2</td>
+              <td>61.3</td>
+              <td>58.3</td>
+              <td>54.4</td>
+            </tr>
+            <tr>
+              <td>Ablate ViT</td>
+              <td>60.9</td>
+              <td>61.3</td>
+              <td>58.3</td>
+              <td>55.5</td>
+            </tr>
+          </table>
+        </div>
+  
         <!-- Table 2 -->
-        <table border="1" style="margin-bottom: 20px;">
-          <caption>Table 2: Only Training on Synthetic Line Plots</caption>
-          <tr>
-            <th>Model</th>
-            <th>GVal-L</th>
-            <th>TestM-B</th>
-            <th>TestM-L</th>
-            <th>TestM-O</th>
-          </tr>
-          <tr>
-            <td>Baseline</td>
-            <td>49.4</td>
-            <td>64.5</td>
-            <td>58.3</td>
-            <td>50.7</td>
-          </tr>
-          <tr>
-            <td>LoRA (32)</td>
-            <td>57.1</td>
-            <td>64.9</td>
-            <td>62.5</td>
-            <td>53.8</td>
-          </tr>
-        </table>
-
+        <div class="column" style="flex: 1; margin-right: 10px;">
+          <table border="1" style="width: 100%;">
+            <caption>Table 2: Only Training on Synthetic Line Plots</caption>
+            <tr>
+              <th>Model</th>
+              <th>GVal-L</th>
+              <th>TestM-B</th>
+              <th>TestM-L</th>
+              <th>TestM-O</th>
+            </tr>
+            <tr>
+              <td>Baseline</td>
+              <td>49.4</td>
+              <td>64.5</td>
+              <td>58.3</td>
+              <td>50.7</td>
+            </tr>
+            <tr>
+              <td>LoRA (32)</td>
+              <td>57.1</td>
+              <td>64.9</td>
+              <td>62.5</td>
+              <td>53.8</td>
+            </tr>
+          </table>
+        </div>
+  
         <!-- Table 3 -->
-        <table border="1">
-          <caption>Table 3: Training on Both Synthetic Bar and Line Plots</caption>
-          <tr>
-            <th>Model</th>
-            <th>GVal-B/L</th>
-            <th>TestM-B</th>
-            <th>TestM-L</th>
-            <th>TestM-O</th>
-          </tr>
-          <tr>
-            <td>Baseline</td>
-            <td>50.0/49.4</td>
-            <td>64.5</td>
-            <td>58.3</td>
-            <td>50.7</td>
-          </tr>
-          <tr>
-            <td>LoRA (32)</td>
-            <td>68.8/63.6</td>
-            <td>67.7</td>
-            <td>70.8</td>
-            <td>54.2</td>
-          </tr>
-          <tr>
-            <td>DoRA (32)</td>
-            <td>71.9/58.4</td>
-            <td>71.0</td>
-            <td>70.8</td>
-            <td>54.6</td>
-          </tr>
-        </table>
-
+        <div class="column" style="flex: 1;">
+          <table border="1" style="width: 100%;">
+            <caption>Table 3: Training on Both Synthetic Bar and Line Plots</caption>
+            <tr>
+              <th>Model</th>
+              <th>GVal-B/L</th>
+              <th>TestM-B</th>
+              <th>TestM-L</th>
+              <th>TestM-O</th>
+            </tr>
+            <tr>
+              <td>Baseline</td>
+              <td>50.0/49.4</td>
+              <td>64.5</td>
+              <td>58.3</td>
+              <td>50.7</td>
+            </tr>
+            <tr>
+              <td>LoRA (32)</td>
+              <td>68.8/63.6</td>
+              <td>67.7</td>
+              <td>70.8</td>
+              <td>54.2</td>
+            </tr>
+            <tr>
+              <td>DoRA (32)</td>
+              <td>71.9/58.4</td>
+              <td>71.0</td>
+              <td>70.8</td>
+              <td>54.6</td>
+            </tr>
+          </table>
+        </div>
+        
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
  
 
